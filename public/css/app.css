@@ -1,0 +1,9 @@
+body {
+	margin: 20px;
+}
+
+li.list-group-item:focus, li.list-group-item:hover {
+    color: #555;
+    text-decoration: none;
+    background-color: #F5F5F5;
+}

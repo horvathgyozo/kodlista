@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<title>Kódlista</title>
+
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/simplex/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<div id="main-container">
+		<h1>Kódlista</h1>
+		<div id="main">
+			<div id="list-container">
+				<div id="filter">
+				</div>
+				<div id="list">
+					<ul id="code-list" class="list-group">
+						<li class="list-group-item">caws</li>
+						<li class="list-group-item">fewfew</li>
+					</ul>
+				</div>
+			</div>
+			<div id="snippet-container" style="display: none">
+				<div id="nav">nav</div>
+				<div id="edit">edit</div>
+				<div id="view">view</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+	<script id="listItems" type="text/template">
+		<% coll.forEach(function (e) { %>
+		<li class="list-group-item"><%= e %></li>
+		<% }) %>
+	</script>
+	 -->
+
+	<script type="text/template" id="list-container-template">
+		<div id="filter"></div>
+		<div id="list"></div>
+	</script>
+
+	<script type="text/template" id="filter-template">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="text-filter">Filter</label>
+				<input type="text" class="form-control" id="text-filter">
+			</div>
+		</form>
+	</script>
+
+	<script type="text/template" id="list-item-template">
+		<%= title %>
+	</script>
+	
+	<script type="text/template" id="snippet-container-template">
+		<div id="nav"></div>
+		<div id="snippetView"></div>
+		<div id="snippetEdit"></div>
+	</script>
+
+	<script type="text/template" id="snippet-view-template">
+		<h2><%= title %></h2>
+		<pre>
+<%= code %>
+		</pre>
+	</script>
+
+	<script type="text/template" id="navigation-template">
+		<div class="btn-group" role="group">
+			<button type="button" class="btn btn-default" id="snippet-view">View</button>
+			<button type="button" class="btn btn-default" id="snippet-edit">Edit</button>
+			<button type="button" class="btn btn-default" id="snippet-delete">Delete</button>
+			<button type="button" class="btn btn-default" id="snippet-back">Back</button>
+		</div>
+	</script>
+
+	<script type="text/template" id="snippet-edit-template">
+		Title: <input type="text" value="<%= title %>" class="form-control" id="snippet-title">
+		Snippet: <br>
+		<textarea class="form-control" id="snippet-code"><%= code %></textarea>
+		<input type="button" value="Save" class="form-control btn btn-primary" id="snippet-save">
+	</script>
+
+	<!-- 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.min.js"></script>
+	<script src="lib/jquery/dist/jquery.min.js"></script>
+	<script src="lib/underscore/underscore-min.js"></script>
+	<script src="lib/backbone/backbone-min.js"></script>
+	<script src="lib/backbone.marionette/lib/backbone.marionette.min.js"></script>
+	 -->
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
